@@ -1,0 +1,86 @@
+I1003 10:27:15.851927 126582553608320 evaluation_main.py:57] Generating eval_results_strict...
+I1003 10:27:16.735501 126582553608320 evaluation_main.py:63] Accuracy: 0.284658
+I1003 10:27:16.749225 126582553608320 evaluation_main.py:69] Generated: /root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-0625/eval_results_strict.jsonl
+================================================================
+/root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-0625/eval_results_strict.jsonl Accuracy Scores:
+prompt-level: 0.2846580406654344
+instruction-level: 0.4064748201438849
+
+change_case 0.30337078651685395
+combination 0.13846153846153847
+detectable_content 0.5283018867924528
+detectable_format 0.3630573248407643
+keywords 0.6196319018404908
+language 0.12903225806451613
+length_constraints 0.35664335664335667
+punctuation 0.25757575757575757
+startend 0.6716417910447762
+
+change_case:capital_word_frequency 0.36
+change_case:english_capital 0.28
+change_case:english_lowercase 0.28205128205128205
+combination:repeat_prompt 0.1951219512195122
+combination:two_responses 0.041666666666666664
+detectable_content:number_placeholders 0.4444444444444444
+detectable_content:postscript 0.6153846153846154
+detectable_format:constrained_response 0.6
+detectable_format:json_format 0.6470588235294118
+detectable_format:multiple_sections 0.21428571428571427
+detectable_format:number_bullet_lists 0.22580645161290322
+detectable_format:number_highlighted_sections 0.10416666666666667
+detectable_format:title 0.6756756756756757
+keywords:existence 0.6923076923076923
+keywords:forbidden_words 0.7346938775510204
+keywords:frequency 0.5476190476190477
+keywords:letter_frequency 0.45454545454545453
+language:response_language 0.12903225806451613
+length_constraints:nth_paragraph_first_word 0.0
+length_constraints:number_paragraphs 0.37037037037037035
+length_constraints:number_sentences 0.5192307692307693
+length_constraints:number_words 0.2692307692307692
+punctuation:no_comma 0.25757575757575757
+startend:end_checker 0.6538461538461539
+startend:quotation 0.6829268292682927
+I1003 10:27:16.753283 126582553608320 evaluation_main.py:57] Generating eval_results_loose...
+I1003 10:27:18.036307 126582553608320 evaluation_main.py:63] Accuracy: 0.295749
+I1003 10:27:18.057060 126582553608320 evaluation_main.py:69] Generated: /root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-0625/eval_results_loose.jsonl
+================================================================
+/root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-0625/eval_results_loose.jsonl Accuracy Scores:
+prompt-level: 0.2957486136783734
+instruction-level: 0.420863309352518
+
+change_case 0.3146067415730337
+combination 0.16923076923076924
+detectable_content 0.5283018867924528
+detectable_format 0.37579617834394907
+keywords 0.6319018404907976
+language 0.16129032258064516
+length_constraints 0.35664335664335667
+punctuation 0.30303030303030304
+startend 0.6865671641791045
+
+change_case:capital_word_frequency 0.36
+change_case:english_capital 0.32
+change_case:english_lowercase 0.28205128205128205
+combination:repeat_prompt 0.1951219512195122
+combination:two_responses 0.125
+detectable_content:number_placeholders 0.4444444444444444
+detectable_content:postscript 0.6153846153846154
+detectable_format:constrained_response 0.6
+detectable_format:json_format 0.7647058823529411
+detectable_format:multiple_sections 0.21428571428571427
+detectable_format:number_bullet_lists 0.22580645161290322
+detectable_format:number_highlighted_sections 0.10416666666666667
+detectable_format:title 0.6756756756756757
+keywords:existence 0.6923076923076923
+keywords:forbidden_words 0.7959183673469388
+keywords:frequency 0.5476190476190477
+keywords:letter_frequency 0.42424242424242425
+language:response_language 0.16129032258064516
+length_constraints:nth_paragraph_first_word 0.0
+length_constraints:number_paragraphs 0.37037037037037035
+length_constraints:number_sentences 0.5192307692307693
+length_constraints:number_words 0.2692307692307692
+punctuation:no_comma 0.30303030303030304
+startend:end_checker 0.6538461538461539
+startend:quotation 0.7073170731707317

@@ -1,0 +1,87 @@
+I1003 10:12:53.530558 133577274359936 evaluation_main.py:57] Generating eval_results_strict...
+I1003 10:12:54.255095 133577274359936 evaluation_main.py:63] Accuracy: 0.737523
+I1003 10:12:54.269837 133577274359936 evaluation_main.py:69] Generated: /root/translate/trans-prom_result/Llama-4-Maverick-17B-128E-Instruct-FP8/eval_results_strict.jsonl
+================================================================
+/root/translate/trans-prom_result/Llama-4-Maverick-17B-128E-Instruct-FP8/eval_results_strict.jsonl Accuracy Scores:
+prompt-level: 0.7375231053604436
+instruction-level: 0.8177458033573142
+
+change_case 0.797752808988764
+combination 0.7846153846153846
+detectable_content 1.0
+detectable_format 0.8726114649681529
+keywords 0.8098159509202454
+language 0.967741935483871
+length_constraints 0.5594405594405595
+punctuation 1.0
+startend 0.9253731343283582
+
+change_case:capital_word_frequency 0.76
+change_case:english_capital 0.76
+change_case:english_lowercase 0.8461538461538461
+combination:repeat_prompt 0.6585365853658537
+combination:two_responses 1.0
+detectable_content:number_placeholders 1.0
+detectable_content:postscript 1.0
+detectable_format:constrained_response 0.0
+detectable_format:json_format 0.9411764705882353
+detectable_format:multiple_sections 0.6428571428571429
+detectable_format:number_bullet_lists 0.9354838709677419
+detectable_format:number_highlighted_sections 0.9583333333333334
+detectable_format:title 1.0
+keywords:existence 0.8461538461538461
+keywords:forbidden_words 0.9183673469387755
+keywords:frequency 0.7857142857142857
+keywords:letter_frequency 0.6363636363636364
+language:response_language 0.967741935483871
+length_constraints:nth_paragraph_first_word 0.08333333333333333
+length_constraints:number_paragraphs 1.0
+length_constraints:number_sentences 0.5961538461538461
+length_constraints:number_words 0.40384615384615385
+punctuation:no_comma 1.0
+startend:end_checker 0.8846153846153846
+startend:quotation 0.9512195121951219
+I1003 10:12:54.272268 133577274359936 evaluation_main.py:57] Generating eval_results_loose...
+E1003 10:12:54.510493 133577274359936 instructions.py:161] Unable to detect language for text ****** due to No features in text.
+I1003 10:12:54.713904 133577274359936 evaluation_main.py:63] Accuracy: 0.750462
+I1003 10:12:54.729287 133577274359936 evaluation_main.py:69] Generated: /root/translate/trans-prom_result/Llama-4-Maverick-17B-128E-Instruct-FP8/eval_results_loose.jsonl
+================================================================
+/root/translate/trans-prom_result/Llama-4-Maverick-17B-128E-Instruct-FP8/eval_results_loose.jsonl Accuracy Scores:
+prompt-level: 0.7504621072088724
+instruction-level: 0.8273381294964028
+
+change_case 0.8202247191011236
+combination 0.7846153846153846
+detectable_content 1.0
+detectable_format 0.8789808917197452
+keywords 0.8343558282208589
+language 1.0
+length_constraints 0.5594405594405595
+punctuation 1.0
+startend 0.9253731343283582
+
+change_case:capital_word_frequency 0.76
+change_case:english_capital 0.88
+change_case:english_lowercase 0.8205128205128205
+combination:repeat_prompt 0.6585365853658537
+combination:two_responses 1.0
+detectable_content:number_placeholders 1.0
+detectable_content:postscript 1.0
+detectable_format:constrained_response 0.0
+detectable_format:json_format 1.0
+detectable_format:multiple_sections 0.6428571428571429
+detectable_format:number_bullet_lists 0.9354838709677419
+detectable_format:number_highlighted_sections 0.9583333333333334
+detectable_format:title 1.0
+keywords:existence 0.8461538461538461
+keywords:forbidden_words 0.9795918367346939
+keywords:frequency 0.8095238095238095
+keywords:letter_frequency 0.6363636363636364
+language:response_language 1.0
+length_constraints:nth_paragraph_first_word 0.08333333333333333
+length_constraints:number_paragraphs 1.0
+length_constraints:number_sentences 0.5961538461538461
+length_constraints:number_words 0.40384615384615385
+punctuation:no_comma 1.0
+startend:end_checker 0.8846153846153846
+startend:quotation 0.9512195121951219
