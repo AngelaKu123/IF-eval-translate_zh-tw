@@ -13,11 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-cd /root/translate
-
 python3 -m instruction_following_eval.evaluation_main \
-  --input_data=./instruction_following_eval/data/trans_manual.jsonl \
-  --input_response_data=/root/translate/trans-prom_result/Mistral-Small-3.2-24B-Instruct-2506-CS-0625/t-model_response.jsonl \
-  --output_dir=/root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-0625/
+  --input_data=./instruction_following_eval/data/translate_input_data.jsonl \
+  --input_response_data=./instruction_following_eval/data/input_response_data_gpt4_20231107_145030.jsonl \
+  --output_dir=./instruction_following_eval/data/
 
 exit 0
