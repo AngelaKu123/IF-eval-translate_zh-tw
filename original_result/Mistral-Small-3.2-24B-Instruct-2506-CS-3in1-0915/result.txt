@@ -1,0 +1,86 @@
+I1031 10:17:59.309205 132814405374080 evaluation_main.py:57] Generating eval_results_strict...
+I1031 10:17:59.956278 132814405374080 evaluation_main.py:63] Accuracy: 0.182994
+I1031 10:17:59.968248 132814405374080 evaluation_main.py:69] Generated: /root/translate/original_result/Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915/eval_results_strict.jsonl
+================================================================
+/root/translate/original_result/Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915/eval_results_strict.jsonl Accuracy Scores:
+prompt-level: 0.18299445471349354
+instruction-level: 0.3273381294964029
+
+change_case 0.07865168539325842
+combination 0.015384615384615385
+detectable_content 0.49056603773584906
+detectable_format 0.28662420382165604
+keywords 0.49693251533742333
+language 0.03225806451612903
+length_constraints 0.3356643356643357
+punctuation 0.9242424242424242
+startend 0.04477611940298507
+
+change_case:capital_word_frequency 0.28
+change_case:english_capital 0.0
+change_case:english_lowercase 0.0
+combination:repeat_prompt 0.0
+combination:two_responses 0.041666666666666664
+detectable_content:number_placeholders 0.2962962962962963
+detectable_content:postscript 0.6923076923076923
+detectable_format:constrained_response 0.0
+detectable_format:json_format 0.11764705882352941
+detectable_format:multiple_sections 0.35714285714285715
+detectable_format:number_bullet_lists 0.0967741935483871
+detectable_format:number_highlighted_sections 0.16666666666666666
+detectable_format:title 0.7297297297297297
+keywords:existence 0.41025641025641024
+keywords:forbidden_words 0.8163265306122449
+keywords:frequency 0.35714285714285715
+keywords:letter_frequency 0.30303030303030304
+language:response_language 0.03225806451612903
+length_constraints:nth_paragraph_first_word 0.0
+length_constraints:number_paragraphs 0.037037037037037035
+length_constraints:number_sentences 0.5576923076923077
+length_constraints:number_words 0.34615384615384615
+punctuation:no_comma 0.9242424242424242
+startend:end_checker 0.0
+startend:quotation 0.07317073170731707
+I1031 10:17:59.969834 132814405374080 evaluation_main.py:57] Generating eval_results_loose...
+I1031 10:18:00.333449 132814405374080 evaluation_main.py:63] Accuracy: 0.194085
+I1031 10:18:00.346550 132814405374080 evaluation_main.py:69] Generated: /root/translate/original_result/Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915/eval_results_loose.jsonl
+================================================================
+/root/translate/original_result/Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915/eval_results_loose.jsonl Accuracy Scores:
+prompt-level: 0.19408502772643252
+instruction-level: 0.33573141486810554
+
+change_case 0.07865168539325842
+combination 0.015384615384615385
+detectable_content 0.49056603773584906
+detectable_format 0.3184713375796178
+keywords 0.5030674846625767
+language 0.03225806451612903
+length_constraints 0.3356643356643357
+punctuation 0.9393939393939394
+startend 0.04477611940298507
+
+change_case:capital_word_frequency 0.28
+change_case:english_capital 0.0
+change_case:english_lowercase 0.0
+combination:repeat_prompt 0.0
+combination:two_responses 0.041666666666666664
+detectable_content:number_placeholders 0.2962962962962963
+detectable_content:postscript 0.6923076923076923
+detectable_format:constrained_response 0.0
+detectable_format:json_format 0.35294117647058826
+detectable_format:multiple_sections 0.35714285714285715
+detectable_format:number_bullet_lists 0.12903225806451613
+detectable_format:number_highlighted_sections 0.16666666666666666
+detectable_format:title 0.7297297297297297
+keywords:existence 0.41025641025641024
+keywords:forbidden_words 0.8367346938775511
+keywords:frequency 0.35714285714285715
+keywords:letter_frequency 0.30303030303030304
+language:response_language 0.03225806451612903
+length_constraints:nth_paragraph_first_word 0.0
+length_constraints:number_paragraphs 0.037037037037037035
+length_constraints:number_sentences 0.5576923076923077
+length_constraints:number_words 0.34615384615384615
+punctuation:no_comma 0.9393939393939394
+startend:end_checker 0.0
+startend:quotation 0.07317073170731707
