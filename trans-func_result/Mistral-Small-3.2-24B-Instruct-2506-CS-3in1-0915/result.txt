@@ -1,0 +1,86 @@
+I1031 11:00:32.098881 128895357837440 evaluation_main.py:57] Generating eval_results_strict...
+I1031 11:00:33.047816 128895357837440 evaluation_main.py:63] Accuracy: 0.168207
+I1031 11:00:33.069728 128895357837440 evaluation_main.py:69] Generated: /root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915/eval_results_strict.jsonl
+================================================================
+/root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915/eval_results_strict.jsonl Accuracy Scores:
+prompt-level: 0.16820702402957485
+instruction-level: 0.26019184652278177
+
+change_case 0.11235955056179775
+combination 0.015384615384615385
+detectable_content 0.39622641509433965
+detectable_format 0.2802547770700637
+keywords 0.5521472392638037
+language 0.03225806451612903
+length_constraints 0.2937062937062937
+punctuation 0.030303030303030304
+startend 0.08955223880597014
+
+change_case:capital_word_frequency 0.36
+change_case:english_capital 0.0
+change_case:english_lowercase 0.02564102564102564
+combination:repeat_prompt 0.024390243902439025
+combination:two_responses 0.0
+detectable_content:number_placeholders 0.037037037037037035
+detectable_content:postscript 0.7692307692307693
+detectable_format:constrained_response 0.2
+detectable_format:json_format 0.0
+detectable_format:multiple_sections 0.35714285714285715
+detectable_format:number_bullet_lists 0.06451612903225806
+detectable_format:number_highlighted_sections 0.3125
+detectable_format:title 0.5405405405405406
+keywords:existence 0.6410256410256411
+keywords:forbidden_words 0.7755102040816326
+keywords:frequency 0.38095238095238093
+keywords:letter_frequency 0.3333333333333333
+language:response_language 0.03225806451612903
+length_constraints:nth_paragraph_first_word 0.0
+length_constraints:number_paragraphs 0.0
+length_constraints:number_sentences 0.5192307692307693
+length_constraints:number_words 0.28846153846153844
+punctuation:no_comma 0.030303030303030304
+startend:end_checker 0.23076923076923078
+startend:quotation 0.0
+I1031 11:00:33.071508 128895357837440 evaluation_main.py:57] Generating eval_results_loose...
+I1031 11:00:34.152065 128895357837440 evaluation_main.py:63] Accuracy: 0.175601
+I1031 11:00:34.165942 128895357837440 evaluation_main.py:69] Generated: /root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915/eval_results_loose.jsonl
+================================================================
+/root/translate/trans-func_result/Mistral-Small-3.2-24B-Instruct-2506-CS-3in1-0915/eval_results_loose.jsonl Accuracy Scores:
+prompt-level: 0.1756007393715342
+instruction-level: 0.27218225419664266
+
+change_case 0.11235955056179775
+combination 0.015384615384615385
+detectable_content 0.39622641509433965
+detectable_format 0.31210191082802546
+keywords 0.5705521472392638
+language 0.0
+length_constraints 0.3006993006993007
+punctuation 0.045454545454545456
+startend 0.1044776119402985
+
+change_case:capital_word_frequency 0.36
+change_case:english_capital 0.0
+change_case:english_lowercase 0.02564102564102564
+combination:repeat_prompt 0.024390243902439025
+combination:two_responses 0.0
+detectable_content:number_placeholders 0.037037037037037035
+detectable_content:postscript 0.7692307692307693
+detectable_format:constrained_response 0.2
+detectable_format:json_format 0.29411764705882354
+detectable_format:multiple_sections 0.35714285714285715
+detectable_format:number_bullet_lists 0.06451612903225806
+detectable_format:number_highlighted_sections 0.3125
+detectable_format:title 0.5405405405405406
+keywords:existence 0.6410256410256411
+keywords:forbidden_words 0.8163265306122449
+keywords:frequency 0.40476190476190477
+keywords:letter_frequency 0.3333333333333333
+language:response_language 0.0
+length_constraints:nth_paragraph_first_word 0.0
+length_constraints:number_paragraphs 0.037037037037037035
+length_constraints:number_sentences 0.5192307692307693
+length_constraints:number_words 0.28846153846153844
+punctuation:no_comma 0.045454545454545456
+startend:end_checker 0.2692307692307692
+startend:quotation 0.0
