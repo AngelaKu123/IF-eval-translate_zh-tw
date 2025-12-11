@@ -22,6 +22,20 @@ from typing import Dict, Optional, Sequence, Union
 
 from instruction_following_eval import instructions_registry
 
+CHANGE_CASE_PREFIX = instructions_registry.CHANGE_CASE_PREFIX
+FORBIDDEN_WORDS_PREFIX = instructions_registry.FORBIDDEN_WORDS_PREFIX
+TWO_RESPONSES_PREFIX = instructions_registry.TWO_RESPONSES_PREFIX
+JSON_FORMAT_PREFIX = instructions_registry.JSON_FORMAT_PREFIX
+
+# Grouped instruction prefixes for targeted evaluation modes.
+MODE_1_PREFIX_MAP = {
+    "forbidden_words": FORBIDDEN_WORDS_PREFIX,
+    "two_responses": TWO_RESPONSES_PREFIX,
+    "json_format": JSON_FORMAT_PREFIX,
+}
+
+MODE_PREFIX_MAP = {1: MODE_1_PREFIX_MAP}
+
 
 @dataclasses.dataclass
 class InputExample:
@@ -166,6 +180,30 @@ def read_prompt_to_response_dict(input_jsonl_filename):
       example = json.loads(l)
       return_dict[example["prompt"]] = example["response"]
   return return_dict
+
+
+def filter_inputs_by_instruction_prefix(
+    inputs: Sequence[InputExample], instruction_prefix: str
+) -> list[InputExample]:
+  """Filters inputs by an instruction prefix (e.g., change-case tasks)."""
+
+  return filter_inputs_by_instruction_prefixes(inputs, [instruction_prefix])
+
+
+def filter_inputs_by_instruction_prefixes(
+    inputs: Sequence[InputExample], instruction_prefixes: Sequence[str]
+) -> list[InputExample]:
+  """Filters inputs by any of a list of instruction prefixes."""
+
+  prefix_tuple = tuple(instruction_prefixes)
+  return [
+      inp
+      for inp in inputs
+      if any(
+          instruction_id.startswith(prefix_tuple)
+          for instruction_id in inp.instruction_id_list
+      )
+  ]
 
 
 def print_report(outputs):

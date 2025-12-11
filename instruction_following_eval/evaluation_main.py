@@ -40,6 +40,15 @@ _OUTPUT_DIR = flags.DEFINE_string(
     required=True,
 )
 
+_MODE = flags.DEFINE_integer(
+    "mode",
+    0,
+    (
+        "Evaluation mode: 0 for all cases; 1 for forbidden_words, "
+        "two_responses, and json_format items only."
+    ),
+)
+
 
 def main(argv):
   if len(argv) > 1:
@@ -48,6 +57,22 @@ def main(argv):
   inputs = evaluation_lib.read_prompt_list(_INPUT_DATA.value)
   prompt_to_response = evaluation_lib.read_prompt_to_response_dict(
       _INPUT_RESPONSE_DATA.value)
+
+  if _MODE.value == 0:
+    inputs = inputs
+  elif _MODE.value in evaluation_lib.MODE_PREFIX_MAP:
+    targeted_prefixes = evaluation_lib.MODE_PREFIX_MAP[_MODE.value]
+    inputs = evaluation_lib.filter_inputs_by_instruction_prefixes(
+        inputs, targeted_prefixes.values()
+    )
+    if not inputs:
+      target_names = ", ".join(sorted(targeted_prefixes))
+      raise app.UsageError(
+          "No inputs match the targeted evaluation mode "
+          f"({target_names})."
+      )
+  else:
+    raise app.UsageError(f"Unsupported evaluation mode: {_MODE.value}")
 
   # get instruction following results
   for func, output_file_name in [

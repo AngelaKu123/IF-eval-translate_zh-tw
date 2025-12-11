@@ -30,6 +30,9 @@ python3 -m instruction_following_eval.evaluation_main \
   --output_dir=./instruction_following_eval/data/
 ```
 
+To evaluate only `forbidden_words`, `two_responses`, and `json_format`
+instructions, add `--mode=1`.
+
 ## Reference
 
 If you use our work, please consider citing our preprint:

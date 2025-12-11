@@ -36,6 +36,12 @@ _CHANGE_CASES = "change_case:"
 
 _PUNCTUATION = "punctuation:"
 
+# Exported prefixes for instruction categories used by evaluators.
+CHANGE_CASE_PREFIX = _CHANGE_CASES
+FORBIDDEN_WORDS_PREFIX = _KEYWORD + "forbidden_words"
+TWO_RESPONSES_PREFIX = _COMBINATION + "two_responses"
+JSON_FORMAT_PREFIX = _FORMAT + "json_format"
+
 INSTRUCTION_DICT = {
     _KEYWORD + "existence": instructions.KeywordChecker,
     _KEYWORD + "frequency": instructions.KeywordFrequencyChecker,
