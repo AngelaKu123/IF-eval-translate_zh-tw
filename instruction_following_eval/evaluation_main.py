@@ -24,7 +24,6 @@ from absl import logging
 
 from instruction_following_eval import evaluation_lib
 
-
 _INPUT_DATA = flags.DEFINE_string(
     "input_data", None, "path to input data", required=True
 )
@@ -40,6 +39,15 @@ _OUTPUT_DIR = flags.DEFINE_string(
     required=True,
 )
 
+#########
+_MODE = flags.DEFINE_integer(
+    "mode",
+    0,
+    "Evaluation mode. 0=original (all 25 instruction types). "
+    "1=restricted subset (17 instruction types: keywords/language/length/content/format; "
+    "excludes combination/startend/change_case/punctuation).",
+)
+##########
 
 def main(argv):
   if len(argv) > 1:
@@ -48,6 +56,25 @@ def main(argv):
   inputs = evaluation_lib.read_prompt_list(_INPUT_DATA.value)
   prompt_to_response = evaluation_lib.read_prompt_to_response_dict(
       _INPUT_RESPONSE_DATA.value)
+  
+  #############
+  # Optional filtering by mode.
+  if _MODE.value != 0:
+    filtered = []
+    for inp in inputs:
+      finp = evaluation_lib.filter_input_example_by_mode(inp, _MODE.value)
+      # Skip prompts that have no remaining instructions after filtering.
+      if finp.instruction_id_list:
+        filtered.append(finp)
+    inputs = filtered
+
+  if not inputs:
+    raise ValueError(
+        "No prompts left to evaluate after filtering. "
+        "Check --mode, or verify the instruction ids present in --input_data."
+    )
+  #################
+  
 
   # get instruction following results
   for func, output_file_name in [

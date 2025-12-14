@@ -22,6 +22,35 @@ from typing import Dict, Optional, Sequence, Union
 
 from instruction_following_eval import instructions_registry
 
+##############
+MODE1_ALLOWED_TIER0_IDS = {
+    # keywords
+    "keywords:existence",
+    "keywords:frequency",
+    "keywords:forbidden_words",
+    # language
+    "language:response_language",
+    # length_constraints
+    "length_constraints:number_sentences",
+    "length_constraints:number_paragraphs",
+    "length_constraints:number_words",
+    "length_constraints:nth_paragraph_first_word",
+    # detectable_content
+    "detectable_content:postscript",
+    # detectable_format
+    "detectable_format:number_bullet_lists",
+    "detectable_format:multiple_sections",
+    "detectable_format:json_format",
+    "detectable_format:title",
+    # combination
+    "combination:repeat_prompt",
+    "combination:two_responses",
+    # startend
+    "startend:end_checker",
+    # punctuation
+    "punctuation:no_comma"
+}
+###########
 
 @dataclasses.dataclass
 class InputExample:
@@ -219,3 +248,26 @@ def print_report(outputs):
     accuracy = tier1_correct[instruction_id] / tier1_total[instruction_id]
     print(f"{instruction_id} {accuracy}")
 
+
+#########
+def filter_input_example_by_mode(inp: "InputExample", mode: int) -> "InputExample":
+  if mode == 0:
+    return inp
+  if mode != 1:
+    raise ValueError(f"Unsupported mode={mode}. Expected 0 or 1.")
+
+  kept_instruction_ids = []
+  kept_kwargs = []
+  for instruction_id, kw in zip(inp.instruction_id_list, inp.kwargs):
+    if instruction_id in MODE1_ALLOWED_TIER0_IDS:   # 直接比完整 id
+      kept_instruction_ids.append(instruction_id)
+      kept_kwargs.append(kw)
+
+  return InputExample(
+      key=inp.key,
+      instruction_id_list=kept_instruction_ids,
+      prompt=inp.prompt,
+      kwargs=kept_kwargs,
+  )
+
+################

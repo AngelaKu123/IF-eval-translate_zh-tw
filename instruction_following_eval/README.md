@@ -28,7 +28,40 @@ python3 -m instruction_following_eval.evaluation_main \
   --input_data=./instruction_following_eval/data/input_data.jsonl \
   --input_response_data=./instruction_following_eval/data/input_response_data_gpt4_20231107_145030.jsonl \
   --output_dir=./instruction_following_eval/data/
+  --mode=0
 ```
+### Note
+---
+For parameter `mode`:  
+`--mode=0`: General (original 25 instructions)  
+`--mode=1`: Customer Service (17 Customer Service instructions)  
+
+The Customer Service instructions list is as follows:  
+* Keywords: 
+  "Include Keywords", 
+  "Keyword Frequency", 
+  "Forbidden Words"  
+* Language: 
+  "Response Language"  
+* Length Constraints: 
+  "Number Paragraphs", 
+  "Number Words", 
+  "Number Sentences", 
+  "Number Paragraphs + First Word in i-th Paragraph"  
+* Detectable Content: 
+  "Postscript",  
+* Detectable Format: 
+  "Number Bullets",
+  "Multiple Sections",
+  "JSON Format",
+  "Title"  
+* Combination: 
+  "Repeat Prompt",
+  "Two Responses"  
+* Start with / End with: 
+  "End Checker"  
+* Punctuation:
+  "No commas"  
 
 ## Reference
 
@@ -42,3 +75,9 @@ If you use our work, please consider citing our preprint:
   year={2023}
 }
 ```
+
+Filtering the sources of Customer Service instructions:
+
+* [LiveBench: A Challenging, Contamination-Free LLM Benchmark](https://arxiv.org/abs/2406.19314)  
+
+* [Benchmarking Complex Instruction-Following with Multiple Constraints Composition](https://arxiv.org/abs/2407.03978)
